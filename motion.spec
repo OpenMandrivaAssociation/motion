@@ -1,5 +1,5 @@
 %define name	motion
-%define version 3.2.7
+%define version 3.2.8
 %define release %mkrel 1
 
 Summary:      	Motion is a software motion detector
@@ -31,6 +31,7 @@ perl -pi -e 's!LDFLAGS="-Wl,-rpath,.*"!!g' configure
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
 mv $RPM_BUILD_ROOT%{_sysconfdir}/motion-dist.conf $RPM_BUILD_ROOT%{_sysconfdir}/motion.conf
+rm -Rf $RPM_BUILD_ROOT/%_datadir/doc/
 %clean
 rm -rf $RPM_BUILD_ROOT
 
