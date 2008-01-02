@@ -10,6 +10,7 @@ Group:	        Video
 License: 	GPL
 Source: 	%{name}-%{version}.tar.bz2
 URL: 		http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	jpeg-devel ffmpeg-devel mysql-devel
 
 %description
