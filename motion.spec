@@ -2,7 +2,7 @@
 %define version 3.2.8
 %define release %mkrel 1
 
-Summary:      	Motion is a software motion detector
+Summary:      	Software motion detector
 Name: 		%{name}
 Version: 	%{version}
 Release:	%{release}
