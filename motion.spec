@@ -1,6 +1,6 @@
 %define name	motion
-%define version 3.2.8
-%define release %mkrel 2
+%define version 3.2.9
+%define release %mkrel 1
 
 Summary:      	Software motion detector
 Name: 		%{name}
@@ -8,7 +8,7 @@ Version: 	%{version}
 Release:	%{release}
 Group:	        Video
 License: 	GPL
-Source: 	%{name}-%{version}.tar.bz2
+Source: 	http://heanet.dl.sourceforge.net/motion/%{name}-%{version}.tar.gz
 URL: 		http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	jpeg-devel ffmpeg-devel mysql-devel
