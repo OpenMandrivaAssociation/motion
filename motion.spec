@@ -21,10 +21,13 @@ property keeping only those images that are interesting.
 
 %prep
 %setup -q
+
 perl -pi -e 's!LDFLAGS="-Wl,-rpath,.*"!!g' configure
 
 %build
-%configure2_5x
+export FFMPEG_CFLAGS_DEB="-I/usr/include/libavformat/ -I/usr/include/libavutil/"
+
+%configure2_5x 
 %make
 
 %install
