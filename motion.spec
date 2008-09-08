@@ -1,6 +1,6 @@
 %define name	motion
 %define version 3.2.10.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:      	Software motion detector
 Name: 		%{name}
@@ -32,7 +32,7 @@ export FFMPEG_CFLAGS_DEB="-I/usr/include/libavformat/ -I/usr/include/libavutil/"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 mv $RPM_BUILD_ROOT%{_sysconfdir}/motion-dist.conf $RPM_BUILD_ROOT%{_sysconfdir}/motion.conf
 rm -Rf $RPM_BUILD_ROOT/%_datadir/doc/
 %clean
