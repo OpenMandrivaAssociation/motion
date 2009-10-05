@@ -1,6 +1,6 @@
 %define name	motion
-%define version 3.2.10.1
-%define release %mkrel 5
+%define version 3.2.11.1
+%define release %mkrel 1 
 %define _disable_ld_as_needed 1
 
 Summary:      	Software motion detector
@@ -26,8 +26,8 @@ property keeping only those images that are interesting.
 
 %prep
 %setup -q
-%patch0 -p 1
-%patch1 -p 1
+#%patch0 -p 1
+#%patch1 -p 1
 
 perl -pi -e 's!LDFLAGS="-Wl,-rpath,.*"!!g' configure
 
@@ -51,5 +51,6 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/motion.conf
 %{_bindir}/motion
 %{_mandir}/man1/motion.1*
+%{_datadir}/%{name}-%{version}/examples/*
 
 
