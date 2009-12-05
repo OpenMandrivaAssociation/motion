@@ -1,7 +1,6 @@
 %define name	motion
 %define version 3.2.11.1
 %define release %mkrel 1 
-%define _disable_ld_as_needed 1
 
 Summary:      	Software motion detector
 Name: 		%{name}
@@ -11,8 +10,6 @@ Group:	        Video
 License: 	GPL
 URL: 		http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome
 Source: 	http://heanet.dl.sourceforge.net/motion/%{name}-%{version}.tar.gz
-Patch0:      motion-3.2.10.1-fix-format-errors.patch
-Patch1:      motion-3.2.10.1-fix-ffmpeg-api-change.patch
 BuildRequires:	jpeg-devel
 BuildRequires:	ffmpeg-devel
 BuildRequires:	mysql-devel
