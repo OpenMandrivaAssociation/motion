@@ -1,6 +1,6 @@
 %define name	motion
 %define version 3.2.11.1
-%define release %mkrel 1 
+%define release %mkrel 2 
 
 Summary:      	Software motion detector
 Name: 		%{name}
@@ -13,6 +13,7 @@ Source: 	http://heanet.dl.sourceforge.net/motion/%{name}-%{version}.tar.gz
 BuildRequires:	jpeg-devel
 BuildRequires:	ffmpeg-devel
 BuildRequires:	mysql-devel
+BuildRequires:	postgresql-libs-devel
 BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -23,14 +24,8 @@ property keeping only those images that are interesting.
 
 %prep
 %setup -q
-#%patch0 -p 1
-#%patch1 -p 1
-
-perl -pi -e 's!LDFLAGS="-Wl,-rpath,.*"!!g' configure
 
 %build
-export FFMPEG_CFLAGS_DEB="-I/usr/include/libavformat/ -I/usr/include/libavutil/"
-
 %configure2_5x 
 %make
 
