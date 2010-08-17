@@ -1,6 +1,6 @@
 %define name	motion
-%define version 3.2.11.1
-%define release %mkrel 3
+%define version 3.2.12
+%define release %mkrel 1
 
 Summary:      	Software motion detector
 Name: 		%{name}
