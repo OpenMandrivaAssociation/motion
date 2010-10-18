@@ -1,6 +1,6 @@
 %define name	motion
 %define version 3.2.12
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:      	Software motion detector
 Name: 		%{name}
@@ -33,7 +33,10 @@ property keeping only those images that are interesting.
 rm -rf %{buildroot}
 %makeinstall_std
 mv %{buildroot}%{_sysconfdir}/motion-dist.conf %{buildroot}%{_sysconfdir}/motion.conf
+mkdir -p %{buildroot}%{_var}/run/motion
+chmod a+rwt %{buildroot}%{_var}/run/motion
 rm -Rf %{buildroot}/%_datadir/doc/
+
 %clean
 rm -rf %{buildroot}
 
@@ -44,5 +47,5 @@ rm -rf %{buildroot}
 %{_bindir}/motion
 %{_mandir}/man1/motion.1*
 %{_datadir}/%{name}-%{version}/examples/*
-
+%{_var}/run/motion
 
