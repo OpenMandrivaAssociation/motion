@@ -8,7 +8,7 @@ Version: 	%{version}
 Release:	%{release}
 Group:	        Video
 License: 	GPL
-URL: 		http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome
+URL: 		https://www.lavrsen.dk/twiki/bin/view/Motion/WebHome
 Source: 	http://heanet.dl.sourceforge.net/motion/%{name}-%{version}.tar.gz
 BuildRequires:	jpeg-devel
 BuildRequires:	ffmpeg-devel
